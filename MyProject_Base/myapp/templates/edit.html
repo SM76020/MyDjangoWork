@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Data</title>
+    <style>
+        *{
+            background-color: chartreuse;
+            margin-left: 100px;
+            margin-right: 100px;
+            padding: 20px;
+        }
+        form{
+            background-color: goldenrod;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center"><u>Update Data</u></h1>
+    <form action="/update/{{objectp.id}}" method="POST">
+        {% csrf_token %}
+        Update Name: 
+        <input type="text" name="name" value="{{objectp.name}}"/>
+        <br>
+        Update Email: 
+        <input type="text" name="email" value="{{objectp.email}}"/>
+        <br>
+        Update Contact: 
+        <input type="text" name="contact" value="{{objectp.contact}}"/>
+        <br>
+        <input type="submit" value="Update Now" align="center">
+    </form>
+</body>
+</html>

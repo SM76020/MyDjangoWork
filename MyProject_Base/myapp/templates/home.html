@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        background-color: aqua;
+    }
+    form{
+        text-align: center;
+        margin: 30px;
+        box-sizing: border-box;
+        background-color: chartreuse;
+    }
+    button{
+        margin: 30px;
+        padding: 40px;
+        color: #093aa4;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    input{
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+</style>
+<body>
+    <h1>Register Youself</h1>
+    <div style = 'margin-top: 30px;'>
+    <form id="form1_position" action="." method="POST">
+        {% csrf_token %}
+        <br>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name='name' placeholder="Enter name">
+        </div>
+        <br>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name='email' placeholder="Enter Email">
+        </div>
+        <br>
+        <div>
+            <label for="contact">Contact</label>
+            <input type="text" name='contact' placeholder="Enter Contact Number">
+        </div>
+        <br>
+        <input type="submit" value="Click here">
+    </div>
+    <!-- <button id="button" type="submit" style="padding: 20px; border-radius: 10px;" onclick="location.href='/show';"> Show Data </button> -->
+    </form>
+</body>
+</html>

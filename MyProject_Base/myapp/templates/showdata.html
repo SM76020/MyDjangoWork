@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Show Data</title>
+    <style>
+        *{
+            background-color: aqua;
+            text-align: center;
+        }
+
+        table{
+            align-items: center;
+            font-size: 20px;
+            border: 2px solid black;
+            column-width: 20px;
+            margin-left: 350px;
+            margin-top: 110px;
+            padding: 5px;
+        }
+        thead{
+            padding: 10px;
+        }
+        tbody{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <br><br> -->
+    <h1><u>Data Table</u></h1>
+    <div class="container">
+        <table>
+            <tbody>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in details_key %}
+                    <tr>
+                        <td>{{i.name}}</td>
+                        <td>{{i.email}}</td>
+                        <td>{{i.contact}}</td>
+                        <td><a href="/edit/{{i.id}}">Edit</a></td>
+                        <td><a href="/delete/{{i.id}}">Delete</a></td>
+                    </tr>
+                {% endfor %}
+                <!-- </tbody> -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
